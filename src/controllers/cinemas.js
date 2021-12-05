@@ -1,8 +1,9 @@
-const Cinema = require("../models/Cinemas")
-const Cinemas_DAO = require('../DAO/cinemas-DAO')
-const bdNovo = require('../infra/sqlite-db');
-const ConfirmaID = require("../models/valida_id") 
+const Cinema = require("../model/cinemas")
+const Cinemas_DAO = require('../DAO/cinemasDAO')
+const bdNovo = require('../infra/sqlite-db'); 
+
  module.exports = (app) => {
+
   const cinemas_Dao = new Cinemas_DAO(bdNovo);
     app.get('/cinemas', async (req, res) => {
       
