@@ -33,7 +33,7 @@ const bdNovo = require('../infra/sqlite-db');
     const body = req.body
     try {
 
-        const novoCinema = new Cinemas(body.NOME, body.ENDERECO, body.NUMERO, body.BAIRRO, body.CIDADE, body.ESTADO, body.UF, body.CEP)
+        const novoCinema = new Cinemas(body.NOME, body.ENDERECO, body.NUMERO, body.BAIRRO, body.CIDADE, body.ESTADO, body.UF)
         const respNovoCinema = await cinemas_Dao.insert_cinemas(novoCinema);
         res.status(200).json(respNovoCinema)
     } catch (error) {
@@ -51,8 +51,8 @@ app.put('/cinemas/:id', async (req, res) => {
       if (confirmaId.id === -1) {
         res.send("Local não encontrado")
       } else {
-      const novoCinema = new Pedido(body.NOME, body.ENDERECO, body.NUMERO, body.BAIRRO, body.CIDADE, body.ESTADO, body.UF, body.CEP)
-      const respNovoCinema = await cinemas_Dao.update_cinemas(id, novoCienma);
+      const novoCinema = new Cinema(body.NOME, body.ENDERECO, body.NUMERO, body.BAIRRO, body.CIDADE, body.ESTADO, body.UF)
+      const respNovoCinema = await cinemas_Dao.update_cinemas(id, novoCinema);
       res.status(200).json(respNovoCinema)
       }
   } catch (error) {
