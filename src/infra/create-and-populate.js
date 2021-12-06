@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS "CINEMAS" (
 const ADD_CINEMAS_DATA = `
 INSERT INTO CINEMAS (ID, NOME, ENDERECO, NUMERO, BAIRRO, CIDADE, ESTADO, UF)
 VALUES 
-    (1, 'SHOPPING NOVA IGUACU', 'Av. Abílio Augusto Távora', ' 1.111', 'Bairro da Luz', 'NOVA IGUACU', 'Rio de Janeiro', 'RJ'),
+    (1, 'SHOPPING NOVA IGUACU', 'Av. Abílio Augusto Távora', '1.111', 'Bairro da Luz', 'NOVA IGUACU', 'Rio de Janeiro', 'RJ'),
     (2, 'MADUREIRA SHOPPING', 'Estrada do Portela', '222', 'Madureira', 'Madureira', 'Rio de Janeiro', 'RJ'),
    
 `
