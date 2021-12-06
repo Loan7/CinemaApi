@@ -8,8 +8,8 @@ const bdNovo = require('../infra/sqlite-db');
     app.get('/cinemas', async (req, res) => {
       
         try {
-          const resplocal = await cinemas_Dao.select_cinemas();
-          res.status(200).json(resplocal)
+          const respLocal = await cinemas_Dao.select_cinemas();
+          res.status(200).json(respLocal)
       } catch (error) {
           res.status(404).json({ error })
       }
